@@ -27,12 +27,12 @@ var ErrReleaseNotFound = errors.New("release not found")
 func resourceRelease() *schema.Resource {
 	return &schema.Resource{
 		SchemaVersion: 1,
-		MigrateState: resourceReleaseMigrateState,
-		Create: resourceReleaseCreate,
-		Read:   resourceReleaseRead,
-		Delete: resourceReleaseDelete,
-		Update: resourceReleaseUpdate,
-		Exists: resourceReleaseExists,
+		MigrateState:  resourceReleaseMigrateState,
+		Create:        resourceReleaseCreate,
+		Read:          resourceReleaseRead,
+		Delete:        resourceReleaseDelete,
+		Update:        resourceReleaseUpdate,
+		Exists:        resourceReleaseExists,
 		Importer: &schema.ResourceImporter{
 			State: schema.ImportStatePassthrough,
 		},
